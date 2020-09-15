@@ -6,10 +6,16 @@
         <title>User Form</title>  
     </h:head>  
     <h:body>  
-        <h:form>  
+        <h:form id="form">  
             <h:outputLabel for="username">User Name</h:outputLabel>  
-            <h:inputText id="username" value="#{user.name}" required="true" requiredMessage="User Name is required" /><br/>  
-            <h:commandButton id="submit-button" value="Submit" action="response.xhtml"/>  
+            <h:inputText id="name-id" value="#{user.name}"/>  
+            <h:message for="name-id" style="color: red"/>  
+            <br/>  
+            <h:outputLabel for="mobile">Mobile No.</h:outputLabel>  
+            <h:inputText id="mobile-id" value="#{user.mobile}"/>  
+            <h:message for="mobile-id" style="color: red"/>  
+            <br/>  
+            <h:commandButton value="OK" action="response.xhtml"></h:commandButton>  
         </h:form>  
     </h:body>  
 </html>  
